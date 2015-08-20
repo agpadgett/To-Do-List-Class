@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TaskTesk" tests="9" skipped="0" failures="0" errors="0" timestamp="2015-08-20T17:54:24" hostname="epicodus-110.local" time="0.004">
+<testsuite name="TaskTesk" tests="9" skipped="0" failures="0" errors="0" timestamp="2015-08-20T18:31:31" hostname="epicodus-110.local" time="0.004">
   <properties/>
   <testcase name="find_returnsNullWhenNoTaskFound_null" classname="TaskTesk" time="0.0"/>
-  <testcase name="clear_emptiesAllTasksFromArrayList" classname="TaskTesk" time="0.0"/>
+  <testcase name="clear_emptiesAllTasksFromArrayList" classname="TaskTesk" time="0.001"/>
   <testcase name="isCompleted_isFalseAfterInstantiaon_false" classname="TaskTesk" time="0.0"/>
   <testcase name="getCreateAt_instantiatesWithCurrentTime_today" classname="TaskTesk" time="0.001"/>
   <testcase name="newId_tasksInstantiateWithAnID_true" classname="TaskTesk" time="0.0"/>
-  <testcase name="all_returnsAllInstancesOfTask_true" classname="TaskTesk" time="0.001"/>
+  <testcase name="all_returnsAllInstancesOfTask_true" classname="TaskTesk" time="0.0"/>
   <testcase name="find_returnsTaskWithSameId_secondTask" classname="TaskTesk" time="0.0"/>
-  <testcase name="Task_instantiatesCorrectly_True" classname="TaskTesk" time="0.001"/>
+  <testcase name="Task_instantiatesCorrectly_True" classname="TaskTesk" time="0.0"/>
   <testcase name="task_instantiatesWithDescriiption_true" classname="TaskTesk" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

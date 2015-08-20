@@ -16,7 +16,7 @@ public class App{
       model.put("tasks", request.session().attribute("tasks"));
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+    }, new VelocityTemplateEngine()); //go to Index.vtl. Can go to categories.vtl(get /categories) or category-form.vtl (get categories/new)
 
     get("/tasks", (request, response) -> {
       HashMap<String,Object> model = new HashMap<String, Object>();
@@ -33,10 +33,12 @@ public class App{
 
     post("/tasks", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
+      Category category = Category.find(Integer.parseInt(request.queryParams("categoryId")));
       String description = request.queryParams("description");
       Task newTask = new Task(description);
-      model.put("task", newTask);
-      model.put("template", "templates/success.vtl");
+      category.addTask(newTask);
+      model.put("category", category);
+      model.put("template", "templates/category.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -61,7 +63,7 @@ public class App{
       HashMap<String, Object> model = new HashMap<String, Object >();
       model.put("template", "templates/category-form.vtl");
       return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+    }, new VelocityTemplateEngine());//this is the category entry form. once you fill it out, it directs you to categories/:id.
 
     post("/categories", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
@@ -71,5 +73,20 @@ public class App{
       model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/categories/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      model.put("category", Category.find(Integer.parseInt(request.params(":id"))));
+      model.put("template", "templates/category.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/categories/:id/tasks/new", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      model.put("category", Category.find(Integer.parseInt(request.params(":id"))));
+      model.put("template", "templates/category-tasks-form.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
   }
 }
