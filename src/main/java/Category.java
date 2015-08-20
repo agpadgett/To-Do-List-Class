@@ -22,7 +22,6 @@ public class Category {
     return mId;
   }
 
-
   public ArrayList<Task> getTasks(){
     return mTasks;
   }
@@ -47,7 +46,6 @@ public class Category {
     } // when using 'find', you input an int, and it spits out a Category,
     // try to return the Category at position id-1 (remember, the FIRST thing in an array is at Position 0, and ID is set by SIZE of the array)
     // if you can't find a Category, return 'null'
-
   }
 
 
