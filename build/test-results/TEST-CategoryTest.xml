@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CategoryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-08-20T16:46:10" hostname="epicodus-110.local" time="0.001">
+<testsuite name="CategoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-08-20T16:59:33" hostname="epicodus-110.local" time="0.001">
   <properties/>
+  <testcase name="addTask_addsTaskToList" classname="CategoryTest" time="0.0"/>
   <testcase name="getTasks_initiallyReturnsEmptyArrayList" classname="CategoryTest" time="0.0"/>
   <testcase name="getId_returnsCategoryId" classname="CategoryTest" time="0.0"/>
   <testcase name="clear_removesAllCategoryInstancesFromMemory" classname="CategoryTest" time="0.0"/>

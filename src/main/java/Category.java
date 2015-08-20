@@ -27,6 +27,10 @@ public class Category {
     return mTasks;
   }
 
+  public void addTask(Task task){
+    mTasks.add(task);// add a 'Task' object called 'task' to the mTask array list.
+  }
+
   public static ArrayList<Category> all() {
    return instances;
  }

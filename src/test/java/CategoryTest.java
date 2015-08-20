@@ -37,18 +37,18 @@ public class CategoryTest {
     Category.clear();
     assertEquals(Category.all().size(), 0);
   }
-  
+
   @Test
   public void find_returnsCategoryWithSameId() {
     Category testCategory = new Category("Home");
     assertEquals(Category.find(testCategory.getId()), testCategory);
   }
 
-  // @Test
-  // public void addTask_addsTaskToList() {
-  //   Category testCategory = new Category("Bob's Used Tasks");
-  //   Task testTask = new Task("Mow the lawn");
-  //   testCategory.addTask(testTask);
-  //   assertTrue(testCategory.getTasks().contains(testTask));
-  // }
+  @Test
+  public void addTask_addsTaskToList() {
+    Category testCategory = new Category("Bob's Used Tasks");
+    Task testTask = new Task("Mow the lawn");
+    testCategory.addTask(testTask);
+    assertTrue(testCategory.getTasks().contains(testTask));
+  }
 }
